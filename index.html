@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Code Style Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Code Style Analyzer</h1>
+    <p>Upload your zip file containing React, Swift, Objective-C, or Java code.<br>
+    Get a downloadable report of formatting issues.</p>
+  </header>
+  <main>
+    <label class="upload-label">
+      <span>Upload zip:</span>
+      <input type="file" id="zip-upload" accept=".zip" />
+    </label>
+    <button id="analyze-btn">Analyze Code</button>
+    <div id="status"></div>
+    <div id="progress-container" style="width:100%;background:#eee;border-radius:8px;overflow:hidden;display:none;">
+      <div id="progress-bar" style="width:0%;height:16px;background:#A3BFFA;transition:width 0.3s;"></div>
+    </div>
+    <div id="results"></div>
+    <button id="download-report" style="display:none;">Download Report</button>
+    <div id="analysis-progress" style="margin:1rem 0; font-size:1.1rem;"></div>
+    <div id="error-tables"></div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="analyzer.js"></script>
+</body>
+</html>
